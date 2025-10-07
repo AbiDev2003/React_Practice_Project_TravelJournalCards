@@ -55,7 +55,7 @@ A responsive travel journal card display built with React and vanilla CSS. Featu
     <!-- wrong approach-->
     <img src='./..images/globe.png' alt="no image" />
     ```
-2. Otherwise you might move all your images or entire './images' folder to public if you are writing like this
+2. Another solution is that, you might move all your images or entire './images' folder to public if you are writing like this
     ```js
     <img src='/images/globe.png' alt="no image" />
     <!-- or -->
