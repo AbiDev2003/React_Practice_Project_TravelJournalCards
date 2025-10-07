@@ -37,6 +37,42 @@ A responsive travel journal card display built with React and vanilla CSS. Featu
 - Transitions and animations
 - Mobile-first approach
 
+## Error or debug problem faced
+
+#### problem statement
+- Faced a deployment error 404
+- Local images were not getting displayed in my vercel deployed website
+- images were in my local ./images folder.
+
+#### fixing it
+1. I was not importing my images like shown below, instead I was directly using them in path. 
+
+    ```js
+    <!-- right approach -->
+    import Globe from './../images/globe.png';
+    <img src={Globe} alt="no image" />
+    
+    <!-- wrong approach-->
+    <img src='./..images/globe.png' alt="no image" />
+    ```
+2. Otherwise you might move all your images or entire './images' folder to public if you are writing like this
+    ```js
+    <img src='/images/globe.png' alt="no image" />
+    <!-- or -->
+    <img src='./images/globe.png' alt="no image" />
+    <!-- or -->
+    <img src='images/globe.png' alt="no image" />
+    ```
+3. Only these fixes solved my problem—no need to add any `vercel.json` file for now. This file is only needed for the following cases:
+
+   - For custom URL rewrites or redirects (e.g., SPA fallback, vanity URLs).  
+   - To set custom HTTP headers (e.g., security, caching).  
+   - To proxy API requests to external servers.  
+   - To specify a custom build or output directory.  
+   - To configure internationalization (i18n) and locale routing.  
+   - To set up custom environment-specific settings or function regions.  
+   - To define cache-control and advanced static file handling.
+
 ## 📁 React-tree Structure
 
 ```mermaid
