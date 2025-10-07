@@ -12,7 +12,7 @@ export default function Entry(props){
                 </div>
 
                 <div className="info-container">
-                    <img src="./images/location.png" alt="no image" className="marker" />
+                    <img src="./../images/location.png" alt="no image" className="marker" />
                     <span className="country">{props.country}</span>
                     <a href={props.googleMapLinks}>View on google map</a>
                     <h2 className="entry-title">{props.title}</h2>
